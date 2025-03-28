@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*, 
+*before, 
+*after {
+    box-sizing: border-box;
+}
+
+body {
+  @apply bg-beige-100 font-regular 
+}
+
+@layer base {
+  @font-face {
+    font-family: "PublicSans-Regular";
+    font-style: normal;
+    font-weight: 400;
+    src: url(/fonts/PublicSans-Regular.woff2).format("ttf");
+  }
+  @font-face {
+    font-family: "PublicSans-Bold";
+    font-style: normal;
+    font-weight: 400;
+    src: url(/fonts/PublicSans-Bold.woff2).format("ttf");
+  }
+}

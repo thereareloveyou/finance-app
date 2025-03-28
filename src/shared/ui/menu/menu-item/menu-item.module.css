@@ -1,0 +1,19 @@
+.menu_item {
+  @apply flex flex-row items-center py-4 px-9 w-[90%] rounded-tr-xl rounded-br-xl gap-4 font-bold leading-[150%] text-base text-grey-500;
+}
+
+.menu_item > svg > path {
+  @apply fill-beige-500;
+}
+
+.active {
+  @apply bg-beige-100 border-l-4 border-l-green text-grey-900;
+}
+
+.menu_item > svg {
+  @apply w-6 h-6;
+}
+
+.active > svg > path {
+  @apply fill-green;
+}

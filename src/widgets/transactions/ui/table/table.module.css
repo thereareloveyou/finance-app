@@ -1,0 +1,29 @@
+.titles {
+}
+
+.titles,
+.values {
+  @apply text-grey-500 text-xs font-light;
+}
+
+.titles th:first-child {
+  @apply text-start;
+}
+
+.titles th:last-child {
+  @apply text-end;
+}
+
+.values {
+  @apply text-center;
+}
+
+.values td:last-child {
+  @apply text-end text-sm font-bold;
+}
+
+
+.not_found{
+  @apply
+  w-full text-center m-7 text-lg text-grey-900 font-bold
+}

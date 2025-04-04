@@ -1,14 +1,19 @@
-import React from "react";
-
+import { Dispatch, FC, SetStateAction } from "react";
 import SearchSvg from "../../../assets/Icons/Search.svg?react";
 
-export const Search = () => {
+import styles from "./search.module.css";
+
+export type SearchProps = {
+  setSearchTerm: Dispatch<SetStateAction<string>>;
+};
+
+export const Search: FC<SearchProps> = ({ setSearchTerm }) => {
   return (
-    <div className="relative w-[320px]">
-      <SearchSvg className="absolute w-4 h-4 right-5 top-4" />
+    <div className={styles.search}>
+      <SearchSvg />
       <input
+        onChange={(e) => setSearchTerm(e.target.value)}
         placeholder="Search transactions"
-        className="w-full px-5 py-3 border-beige-500 border rounded-lg placeholder:text-sm leading-4 font-regular"
       />
     </div>
   );

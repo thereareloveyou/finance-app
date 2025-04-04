@@ -1,13 +1,29 @@
 .menu_item {
-  @apply flex flex-row items-center py-4 px-9 w-[90%] rounded-tr-xl rounded-br-xl gap-4 font-bold leading-[150%] text-base text-grey-500;
+  @apply flex flex-row items-center py-4 px-9 w-[90%] rounded-tr-xl rounded-br-xl gap-4 font-bold leading-[150%] text-base text-grey-500 transition;
+}
+
+.menu_item:hover {
+  @apply text-beige-100 transition duration-300 ease-in-out;
+}
+
+.menu_item:hover > svg > path {
+  @apply fill-beige-100 transition duration-300 ease-in-out;
 }
 
 .menu_item > svg > path {
-  @apply fill-beige-500;
+  @apply fill-beige-500 transition  duration-300 ease-in-out;
 }
 
 .active {
   @apply bg-beige-100 border-l-4 border-l-green text-grey-900;
+}
+
+.active:hover {
+  @apply bg-beige-100 border-l-4 border-l-green text-grey-900;
+}
+
+.active:hover > svg > path {
+  @apply fill-green;
 }
 
 .menu_item > svg {

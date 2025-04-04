@@ -1,0 +1,11 @@
+.search {
+  @apply relative w-[320px];
+}
+
+.search > svg {
+  @apply absolute w-4 h-4 right-5 top-4;
+}
+
+.search > input {
+  @apply w-full px-5 py-3 border-beige-500 border rounded-lg placeholder:text-sm leading-4 font-regular;
+}

@@ -1,0 +1,19 @@
+.container {
+  @apply w-[50%];
+}
+
+.pot_item {
+  @apply flex flex-row gap-4;
+}
+
+.pot_item_colorTheme {
+  @apply min-h-full w-1 rounded-full;
+}
+
+.pot_item_title {
+  @apply text-xs text-grey-500;
+}
+
+.pot_item_value {
+  @apply text-sm font-bold;
+}

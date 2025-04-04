@@ -1,0 +1,11 @@
+.container {
+  @apply flex flex-row items-center gap-4;
+}
+
+.avatar {
+  @apply rounded-full w-10 h-10;
+}
+
+.title {
+  @apply text-grey-900 text-sm font-bold;
+}

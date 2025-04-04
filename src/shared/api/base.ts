@@ -21,7 +21,7 @@ export class ApiClient {
   }
 
   public async get<TResult = unknown>(value: string): Promise<TResult> {
-    const responce = await axios.get(this.baseUrl + value);
+    const responce = await axios.get(this.baseUrl + value, {});
 
     return this.handleResponce<TResult>(responce);
   }

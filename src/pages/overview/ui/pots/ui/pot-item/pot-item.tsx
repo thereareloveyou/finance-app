@@ -1,16 +1,18 @@
 import { PotTypes } from "../../../../../../entities/pot/types/pots.types";
 
+import styles from "./pot-item.module.css";
+
 export const PotItem = ({ name, total, theme }: PotTypes) => {
   return (
-    <div className="w-[50%]">
-      <div className="flex flex-row gap-4">
+    <div className={styles.container}>
+      <div className={styles.pot_item}>
         <div
           style={{ backgroundColor: `${theme}` }}
-          className="min-h-full w-1 rounded-full"
+          className={styles.pot_item_colorTheme}
         ></div>
         <div>
-          <p className="text-xs text-grey-500">{name}</p>
-          <span className="text-sm font-bold ">${total}</span>
+          <p className={styles.pot_item_title}>{name}</p>
+          <span className={styles.pot_item_value}>${total}</span>
         </div>
       </div>
     </div>

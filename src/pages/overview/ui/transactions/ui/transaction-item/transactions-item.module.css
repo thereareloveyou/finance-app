@@ -1,0 +1,15 @@
+.transaction_item {
+  @apply flex justify-between items-center;
+}
+
+.transaction_item_info {
+  @apply flex flex-col items-end gap-2;
+}
+
+.transaction_item_value {
+  @apply text-grey-900 text-sm font-bold;
+}
+
+.transaction_item_date {
+  @apply text-xs text-grey-500;
+}

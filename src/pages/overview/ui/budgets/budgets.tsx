@@ -1,22 +1,27 @@
 import { FC } from "react";
-import { Diagram } from "./ui/Sunbursts";
+
 import { BudgetTypes } from "../../../../entities/budget/types/budgets.types";
 import { BudgetItem } from "./ui/budget-item";
-import { View } from "../../../../shared/ui/view";
+import { Diagram } from "../../../../shared/ui/diagram";
+import { HeadlineBlock } from "../../../../shared/ui/headineBlock";
+
+import styles from "./budgets.module.css";
 
 export const Budgets: FC<{ budgets: BudgetTypes[] }> = ({ budgets }) => {
   return (
-    <div className=" bg-white p-8 rounded-xl flex flex-col w-full row-span-2 col-span-1 items-center ">
-      <div className="flex items-center justify-between mb-12 self-stretch">
-        <div className="text-xl font-bold">Budgets</div>
-        <View href="/">See Details</View>
-      </div>
+    <div className={styles.container_budgets}>
+      <HeadlineBlock
+        link="/budgets"
+        headline="Budgets"
+        titleLink="See Details"
+      />
 
-      <div className="flex flex-row items-center gap-5">
+      <div className={styles.budgets}>
         <Diagram budgets={budgets} />
-        <div className="flex flex-col gap-2">
+        <div className={styles.budgets_items}>
           {budgets.map((el) => (
             <BudgetItem
+              key={el.theme}
               maximum={el.maximum}
               category={el.category}
               theme={el.theme}

@@ -4,7 +4,9 @@ import cn from "classnames";
 import { capitalize } from "lodash";
 import { useFormatNumber } from "../../../hooks/useFormatNumber";
 
-interface BalanceCartTypes {
+import styles from "./balance-cart.module.css";
+
+type BalanceCartTypes =  {
   current: boolean;
   name: string;
   value: number;
@@ -13,20 +15,18 @@ interface BalanceCartTypes {
 export const BalanceCart: FC<BalanceCartTypes> = ({ current, name, value }) => {
   return (
     <div
-      className={cn("bg-white p-6 w-full rounded-xl", {
-        "!bg-grey-900 text-white": current,
+      className={cn(styles.container, {
+        [styles.container_active]: current,
       })}
     >
       <p
-        className={cn("text-sm", {
-          "text-grey-500": !current,
+        className={cn(styles.cart_title, {
+          [styles.cart_title_active]: !current,
         })}
       >
         {name == "current" ? capitalize(name) + " Balance" : capitalize(name)}
       </p>
-      <span className="text-[32px] font-bold ">
-        {"$" + useFormatNumber(value)}
-      </span>
+      <span className={styles.cart_value}>{"$" + useFormatNumber(value)}</span>
     </div>
   );
 };

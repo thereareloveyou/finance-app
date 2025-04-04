@@ -1,7 +1,9 @@
 import { FC } from "react";
 import { WalletTypes } from "../../../../entities/wallet/types/wallet.types";
 import { BillItem } from "./ui/bill-item/bill-item";
-import { View } from "../../../../shared/ui/view";
+import { HeadlineBlock } from "../../../../shared/ui/headineBlock";
+
+import styles from "./bills.module.css";
 
 export const Bills: FC<Pick<WalletTypes, "transactions">> = ({
   transactions,
@@ -45,15 +47,22 @@ export const Bills: FC<Pick<WalletTypes, "transactions">> = ({
     .replace("-", "");
 
   return (
-    <div className="bg-white p-8 rounded-xl flex flex-col w-full row-span-1 col-span-1">
-      <div className="flex items-center justify-between mb-5">
-        <div className="text-xl font-bold">Recurring Bills</div>
-        <View href="/">See Details</View>
-      </div>
-      <div className="flex flex-col gap-2">
-        <BillItem classname="border-l-green" value={paided}>Paid Biils</BillItem>
-        <BillItem classname="border-l-yellow" value={total}>Total Upcoming</BillItem>
-        <BillItem classname="border-l-cyan" value={soon}>Due Soon</BillItem>
+    <div className={styles.container_bills}>
+      <HeadlineBlock
+        link="/bills"
+        headline="Recurring Bills"
+        titleLink="See Details"
+      />
+      <div className={styles.bills}>
+        <BillItem classname="border-l-green" value={paided}>
+          Paid Biils
+        </BillItem>
+        <BillItem classname="border-l-yellow" value={total}>
+          Total Upcoming
+        </BillItem>
+        <BillItem classname="border-l-cyan" value={soon}>
+          Due Soon
+        </BillItem>
       </div>
     </div>
   );

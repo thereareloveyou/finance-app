@@ -1,0 +1,7 @@
+.container {
+  @apply flex flex-row w-full h-full;
+}
+
+.container_transactions {
+  @apply flex flex-col px-10 pt-8 w-full;
+}

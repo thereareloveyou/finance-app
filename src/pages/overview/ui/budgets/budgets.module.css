@@ -1,0 +1,11 @@
+.container_budgets {
+  @apply bg-white p-8 rounded-xl flex flex-col w-full row-span-2 col-span-1 items-center;
+}
+
+.budgets {
+  @apply flex flex-row items-center gap-5;
+}
+
+.budgets_items {
+  @apply flex flex-col gap-2;
+}

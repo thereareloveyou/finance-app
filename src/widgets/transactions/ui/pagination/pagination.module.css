@@ -1,0 +1,18 @@
+.pagination {
+  @apply my-8 flex items-center justify-between;
+}
+
+.buttons_container {
+  @apply flex flex-row gap-2;
+}
+
+.button {
+}
+
+.button:focus {
+  @apply outline-none;
+}
+
+.button_active {
+  @apply bg-grey-900 text-white border-0;
+}

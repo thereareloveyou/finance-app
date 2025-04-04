@@ -1,0 +1,7 @@
+.view {
+  @apply flex flex-row justify-end items-center gap-3;
+}
+
+.link {
+  @apply text-grey-500 text-sm;
+}

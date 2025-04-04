@@ -4,7 +4,7 @@ import cn from "classnames";
 
 import styles from "./menu-item.module.css";
 import { IconLazy } from "../../icon";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 interface menuItemType {
   iconName: string;
   active?: boolean;
@@ -17,8 +17,8 @@ export const MenuItem: FC<menuItemType> = ({
   setActiveItem,
 }) => {
   return (
-    <NavLink
-      to={iconName == "Overview" ? "/" : `/${iconName.toLowerCase()}`}
+    <Link
+      to={iconName == "Overview" ? "/" : `${iconName.toLowerCase()}`}
       onClick={() =>
         setActiveItem !== undefined ? setActiveItem(iconName) : null
       }
@@ -29,6 +29,6 @@ export const MenuItem: FC<menuItemType> = ({
     >
       <IconLazy iconName={iconName} />
       <span>{iconName}</span>
-    </NavLink>
+    </Link>
   );
 };

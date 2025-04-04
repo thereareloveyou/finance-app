@@ -1,0 +1,14 @@
+.bill_item{
+    @apply
+    bg-beige-100 px-5 py-4 rounded-lg border-l-4 flex flex-row justify-between
+}
+
+.bill_title{
+    @apply
+    text-sm text-grey-500
+}
+
+.bill_value{
+    @apply
+    text-sm font-bold text-grey-900
+}

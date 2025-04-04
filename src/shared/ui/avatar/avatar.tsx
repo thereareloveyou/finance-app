@@ -1,17 +1,20 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { renderImageFromApi } from "../../utils/renderImageFromApi";
+
+import styles from "./avatar.module.css";
 
 export const Avatar: FC<{ avatar: string; name: string }> = ({
   avatar,
   name,
 }) => {
   return (
-    <div className="w-10 h-10">
+    <div className={styles.container}>
       <img
-        className="rounded-full"
+        className={styles.avatar}
         src={renderImageFromApi(avatar)}
         alt={name}
       />
+      <span className={styles.title}>{name}</span>
     </div>
   );
 };

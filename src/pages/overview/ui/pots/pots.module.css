@@ -1,0 +1,11 @@
+.container {
+  @apply bg-white p-8 rounded-xl flex flex-col w-full row-span-1 col-span-2;
+}
+
+.pots {
+  @apply flex flex-row gap-5 items-center;
+}
+
+.pots_items {
+  @apply flex flex-row basis-[55%] flex-wrap w-full h-full items-center;
+}

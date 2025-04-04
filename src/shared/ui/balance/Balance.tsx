@@ -1,11 +1,11 @@
 import { FC } from "react";
 import { BalanceCart } from "./balance-cart/balance-cart";
 
-interface BalanceTypes {
+type BalanceTypes = {
   current: number;
   income: number;
   expenses: number;
-}
+};
 
 export const Balance: FC<BalanceTypes> = ({ current, income, expenses }) => {
   const array = {

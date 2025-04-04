@@ -1,20 +1,22 @@
 import { BudgetTypes } from "../../../../../../entities/budget/types/budgets.types";
 
+import styles from "./budget-item.module.css";
+
 export const BudgetItem = ({
   maximum,
   category,
   theme,
 }: Omit<BudgetTypes, "spent">) => {
   return (
-    <div className="w-[100%]">
-      <div className="flex flex-row gap-4">
+    <div className={styles.budgetItem_container}>
+      <div className={styles.budget_item}>
         <div
           style={{ backgroundColor: `${theme}` }}
-          className="min-h-full w-1 rounded-full"
+          className={styles.budget_colorTheme}
         ></div>
         <div>
-          <p className="text-xs text-grey-500">{category}</p>
-          <span className="text-sm font-bold ">${maximum}</span>
+          <p className={styles.budget_category}>{category}</p>
+          <span className={styles.budget_value}>${maximum}</span>
         </div>
       </div>
     </div>

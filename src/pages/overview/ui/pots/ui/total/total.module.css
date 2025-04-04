@@ -1,0 +1,11 @@
+.container {
+  @apply bg-beige-100 flex w-[35%] p-5 items-center gap-4 rounded-xl;
+}
+
+.title {
+  @apply text-sm text-grey-500;
+}
+
+.value {
+  @apply text-[32px] text-grey-900 font-bold;
+}

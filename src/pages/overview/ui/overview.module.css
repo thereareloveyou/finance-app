@@ -1,0 +1,11 @@
+.container {
+  @apply flex flex-row w-full h-full;
+}
+
+.container_overview {
+  @apply flex flex-col px-10 pt-8 w-full;
+}
+
+.overview_grid {
+  @apply grid grid-flow-row grid-cols-3 mt-8 gap-[1em];
+}

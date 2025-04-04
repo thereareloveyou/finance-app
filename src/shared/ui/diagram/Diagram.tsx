@@ -1,11 +1,18 @@
 import ReactECharts, { EChartsOption } from "echarts-for-react";
 import { FC } from "react";
-import { BudgetTypes } from "../../../../../../entities/budget/types/budgets.types";
 
-export const Diagram: FC<{ budgets: BudgetTypes[] }> = ({ budgets }) => {
+type DiagramTypes = {
+  category: string;
+  maximum: number;
+  theme: string;
+  spent: number;
+};
+
+export const Diagram: FC<{ budgets: DiagramTypes[] }> = ({ budgets }) => {
   const option: EChartsOption = {
     series: [
       {
+        animation: false,
         type: "pie",
         radius: [100, "80%"],
         center: ["50%", "50%"],

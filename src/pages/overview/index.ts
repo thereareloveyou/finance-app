@@ -1,1 +1,1 @@
-export { Overview } from "./ui/index";
+export { Overview } from "./ui/overview";

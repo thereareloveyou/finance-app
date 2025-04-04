@@ -1,0 +1,7 @@
+.container {
+  @apply bg-white p-8 rounded-xl flex flex-col w-full row-span-2 col-span-2;
+}
+
+.transactions {
+  @apply flex flex-col gap-5;
+}

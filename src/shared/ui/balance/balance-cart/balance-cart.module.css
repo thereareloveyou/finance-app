@@ -1,0 +1,19 @@
+.container {
+  @apply bg-white p-6 w-full rounded-xl;
+}
+
+.container_active {
+  @apply !bg-grey-900 text-white;
+}
+
+.cart_title {
+  @apply text-sm;
+}
+
+.cart_title_active {
+  @apply text-grey-500;
+}
+
+.cart_value {
+  @apply text-[32px] font-bold;
+}

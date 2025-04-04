@@ -1,13 +1,47 @@
-import { FC } from "react";
+import { Dispatch, FC, SetStateAction } from "react";
+import { TransactionTypes } from "../../../entities/transaction/types/transaction.types";
 
-export const Select: FC<{ options: string[]; name: string }> = ({
-  options,
-  name,
-}) => {
+import styles from "./select.module.css";
+
+export type Sorts =
+  | "Latest"
+  | "Oldest"
+  | "A to Z"
+  | "Z to A"
+  | "Highest"
+  | "Lowest";
+export type Category =
+  | "All Transactions"
+  | "Entertainment"
+  | "Bills"
+  | "Dining Out"
+  | "Transportation"
+  | "Personal Care";
+
+export interface FilltersTypes {
+  searchTerm: string;
+  data: TransactionTypes[];
+  setFilteredData: Dispatch<SetStateAction<TransactionTypes[] | undefined>>;
+}
+
+export const Select: FC<{
+  options: string[];
+  name: string;
+  sort?: (e: Sorts) => void;
+  filter?: (e: Category) => void;
+}> = ({ options, name, sort, filter }) => {
   return (
-    <div className="relative flex gap-2 items-center">
-      <span className="text-sm text-grey-500">{name}</span>
-      <select className="border border-beige-500 rounded-lg pl-5 pr-7 py-3 font-regular text-sm appearance-none bg-[url(../assets/Icons/Select-arrow.svg)] bg-no-repeat bg-[right_10px_top_13px]">
+    <div className={styles.select_container}>
+      <span className={styles.select_title}>{name}</span>
+      <select
+        onChange={(e) =>
+          sort
+            ? sort(e.target.value as Sorts)
+            : filter
+            ? filter(e.target.value as Category)
+            : ""
+        }
+      >
         {options.map((el) => (
           <option key={el} value={el}>
             {el}

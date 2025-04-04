@@ -1,0 +1,19 @@
+.budgetItem_container {
+  @apply w-full;
+}
+
+.budget_item {
+  @apply flex flex-row gap-4;
+}
+
+.budget_colorTheme {
+  @apply min-h-full w-1 rounded-full;
+}
+
+.budget_category {
+  @apply text-xs text-grey-500;
+}
+
+.budget_value {
+  @apply text-sm font-bold;
+}

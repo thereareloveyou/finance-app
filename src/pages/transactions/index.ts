@@ -1,1 +1,1 @@
-export * from './index'
+export {Transactions} from './transactions'

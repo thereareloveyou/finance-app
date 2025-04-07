@@ -1,7 +1,7 @@
 import ReactECharts, { EChartsOption } from "echarts-for-react";
 import { FC } from "react";
 
-type DiagramTypes = {
+interface DiagramTypes {
   category: string;
   maximum: number;
   theme: string;

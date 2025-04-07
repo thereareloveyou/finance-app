@@ -26,7 +26,7 @@ export const Pagination: FC<PaginationTypes> = ({
       <Button
         onClick={() => table.previousPage()}
         disabled={!table.getCanPreviousPage()}
-        classN="w-[90px]"
+        classN="w-[90px] h-10"
       >
         Prev
       </Button>
@@ -35,7 +35,7 @@ export const Pagination: FC<PaginationTypes> = ({
           <Button
             onClick={() => table.setPageIndex(i)}
             key={page}
-            classN={currentPage + 1 === page ? styles.button_active : ""}
+            classN={currentPage + 1 === page ? styles.button_active : "h-10"}
           >
             {page}
           </Button>
@@ -45,7 +45,7 @@ export const Pagination: FC<PaginationTypes> = ({
       <Button
         onClick={() => table.nextPage()}
         disabled={!table.getCanNextPage()}
-        classN="w-[90px]"
+        classN="w-[90px] h-10"
       >
         Next
       </Button>

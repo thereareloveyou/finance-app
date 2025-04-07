@@ -9,3 +9,11 @@
 .select_container > select {
   @apply border border-beige-500 rounded-lg pl-5 pr-7 py-3 font-regular text-sm appearance-none bg-[url(src/assets/Icons/Select-arrow.svg)] bg-no-repeat bg-[right_10px_top_13px];
 }
+
+.select_container_modal {
+  @apply flex-col !items-start;
+}
+
+.select_container_modal > select {
+  @apply w-full
+}

@@ -1,7 +1,8 @@
-import { Dispatch, FC, SetStateAction } from "react";
-import { TransactionTypes } from "../../../entities/transaction/types/transaction.types";
+import { FC } from "react";
 
 import styles from "./select.module.css";
+
+import cn from "classnames";
 
 export type Sorts =
   | "Latest"
@@ -18,20 +19,19 @@ export type Category =
   | "Transportation"
   | "Personal Care";
 
-export interface FilltersTypes {
-  searchTerm: string;
-  data: TransactionTypes[];
-  setFilteredData: Dispatch<SetStateAction<TransactionTypes[] | undefined>>;
-}
-
 export const Select: FC<{
   options: string[];
   name: string;
+  mode?: "modal" | "filter";
   sort?: (e: Sorts) => void;
   filter?: (e: Category) => void;
-}> = ({ options, name, sort, filter }) => {
+}> = ({ options, name, sort, filter, mode }) => {
   return (
-    <div className={styles.select_container}>
+    <div
+      className={cn(styles.select_container, {
+        [styles.select_container_modal]: mode == "modal",
+      })}
+    >
       <span className={styles.select_title}>{name}</span>
       <select
         onChange={(e) =>

@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import { SideBar } from "../../features/sidebar";
+import { SideBar } from "../../shared/ui/sidebar";
 import { FC } from "react";
 
 export const RootLayout: FC = () => {

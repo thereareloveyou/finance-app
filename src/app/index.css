@@ -10,7 +10,7 @@
 }
 
 body {
-  @apply bg-beige-100 font-regular 
+  @apply bg-beige-100 font-regular overflow-hidden
 }
 
 @layer base {

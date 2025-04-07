@@ -25,6 +25,22 @@ export class ApiClient {
 
     return this.handleResponce<TResult>(responce);
   }
+
+  public async getWithParams<TResult = unknown, TParams = unknown>(
+    id: string,
+    params: TParams
+  ): Promise<TResult> {
+
+   
+    const responce = await axios.get(this.baseUrl + id, {
+      params: params
+    });
+
+    console.log(responce)
+
+
+    return this.handleResponce<TResult>(responce);
+  }
 }
 
 export const apiClient = new ApiClient(API_URL);

@@ -1,7 +1,7 @@
 import { FC } from "react";
 
-import Logo from "../../assets/Logo.svg?react";
-import { Menu } from "../../shared/ui/menu";
+import Logo from "../../../assets/Logo.svg?react";
+import { Menu } from "../menu";
 
 export const SideBar: FC = () => {
   return (

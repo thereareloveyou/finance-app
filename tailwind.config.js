@@ -36,7 +36,11 @@ export default {
       regular: ["PublicSans-Regular", "sans-serif"],
       bold: ["PublicSans-Bold", "sans-serif"],
     },
-    extend: {},
+    extend: {
+      dropShadow: {
+        block: "0 4px 4px rgba(0, 0, 0, 0.15)",
+      }
+    },
   },
   plugins: [],
 };
